@@ -21,4 +21,8 @@ def main():
 def load_program(path):
     with open(path, 'r') as program_file:
         contents = program_file.read().strip()
-        return map(lambda byte: int(f"0x{byte}", 0), contents.split(' '))
+        return list(map(lambda byte: int(f"0x{byte}", 0), contents.split(' ')))
+
+
+if __name__ == "__main__":
+    main()
